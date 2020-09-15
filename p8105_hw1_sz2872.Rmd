@@ -10,6 +10,7 @@ This is my solusion to hw1.
 ```{r}
 library(tidyverse)
 library(tibble)
+library(dplyr)
 ```
 
 ## Problem 1
@@ -27,3 +28,14 @@ prob1_df =
 
 prob1_df
 ```
+
+Take the mean of each variable in my data frame.
+
+```{r mean_df}
+mean(pull(prob1_df, samp))
+mean(pull(prob1_df, samp_gt_0))
+mean(pull(prob1_df, char_vec))
+mean(pull(prob1_df, factor_vec))
+```
+
+I can take the mean for the numbers and logical but not for the character or factor. 
