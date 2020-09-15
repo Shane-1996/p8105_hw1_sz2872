@@ -1,0 +1,17 @@
+---
+title: "p8105_hw1_sz2872"
+author: "Shunyi Zhang"
+date: "9/15/2020"
+output: github_document
+---
+
+This is my solusion to hw1. 
+
+```{r}
+library(tidyverse)
+```
+
+## Problem 1
+
+Create a data frame with the specified elements. 
+
