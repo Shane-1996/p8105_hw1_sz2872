@@ -9,9 +9,21 @@ This is my solusion to hw1.
 
 ```{r}
 library(tidyverse)
+library(tibble)
 ```
 
 ## Problem 1
 
 Create a data frame with the specified elements. 
 
+```{r creat_df}
+prob1_df = 
+  tibble(
+    samp = rnorm(10),
+    samp_gt_0 = samp > 0,
+    char_vec = c("my", "cat", "names", "potato", "coke", "cola", "is", "a", "black", "kitty"),
+    factor_vec = factor(c("small", "small", "small", "mid", "mid", "mid", "mid", "large", "large", "large"))
+  )
+
+prob1_df
+```
