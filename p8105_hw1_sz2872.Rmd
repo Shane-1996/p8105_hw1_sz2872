@@ -48,3 +48,8 @@ as.numeric(pull(prob1_df, vec_char))
 as.numeric(pull(prob1_df, vec_factor))
 ```
 
+R converts the logical vectors to numerical vectors. TRUE as 1. FALSE as 0. This is how r calculates the mean for the logical vectors in the previous step. 
+
+R cannot convert character vectors to numerical vectors, thus cannot take the mean.
+
+R assigns numerical value to to each category input of the factor vectors. The mean of this cant provide any information.  
