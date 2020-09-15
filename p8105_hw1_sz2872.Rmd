@@ -39,3 +39,12 @@ mean(pull(prob1_df, factor_vec))
 ```
 
 I can take the mean for the numbers and logical but not for the character or factor. 
+
+Convert vectors to numeric.
+
+```{r convert_vec result = 'hide'}
+as.numeric(pull(prob1_df, samp_gt_0))
+as.numeric(pull(prob1_df, char_vec))
+as.numeric(pull(prob1_df, factor_vec))
+```
+
