@@ -20,10 +20,10 @@ Create a data frame with the specified elements.
 ```{r creat_df}
 prob1_df = 
   tibble(
-    samp = rnorm(10),
-    samp_gt_0 = samp > 0,
-    char_vec = c("my", "cat", "names", "potato", "coke", "cola", "is", "a", "black", "kitty"),
-    factor_vec = factor(c("small", "small", "small", "mid", "mid", "mid", "mid", "large", "large", "large"))
+    vec_num = rnorm(10),
+    vec_log = vec_num > 0,
+    vec_char = c("my", "cat", "names", "potato", "coke", "cola", "is", "a", "black", "kitty"),
+    vec_factor = factor(c("small", "small", "small", "mid", "mid", "mid", "mid", "large", "large", "large"))
   )
 
 prob1_df
@@ -32,10 +32,10 @@ prob1_df
 Take the mean of each variable in my data frame.
 
 ```{r mean_df}
-mean(pull(prob1_df, samp))
-mean(pull(prob1_df, samp_gt_0))
-mean(pull(prob1_df, char_vec))
-mean(pull(prob1_df, factor_vec))
+mean(pull(prob1_df, vec_num))
+mean(pull(prob1_df, vec_log))
+mean(pull(prob1_df, vec_char))
+mean(pull(prob1_df, vec_factor))
 ```
 
 I can take the mean for the numbers and logical but not for the character or factor. 
@@ -43,8 +43,8 @@ I can take the mean for the numbers and logical but not for the character or fac
 Convert vectors to numeric.
 
 ```{r convert_vec, eval = FALSE}
-as.numeric(pull(prob1_df, samp_gt_0))
-as.numeric(pull(prob1_df, char_vec))
-as.numeric(pull(prob1_df, factor_vec))
+as.numeric(pull(prob1_df, vec_log))
+as.numeric(pull(prob1_df, vec_char))
+as.numeric(pull(prob1_df, vec_factor))
 ```
 
