@@ -61,3 +61,11 @@ as.numeric(pull(prob1_df, vec_log)) * pull(prob1_df, vec_num)
 as.factor(pull(prob1_df, vec_log)) * pull(prob1_df, vec_num)
 as.numeric(as.factor(pull(prob1_df, vec_log))) * pull(prob1_df, vec_num)
 ```
+
+## Problem 2
+
+Load the penguins dataset.
+
+```{r load_package}
+data("penguins", package = "palmerpenguins")
+```
