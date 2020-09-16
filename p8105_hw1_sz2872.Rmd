@@ -53,3 +53,11 @@ R converts the logical vectors to numerical vectors. TRUE as 1. FALSE as 0. This
 R cannot convert character vectors to numerical vectors, thus cannot take the mean.
 
 R assigns numerical value to to each category input of the factor vectors. The mean of this cant provide any information.  
+
+Convert logical vectors.
+
+```{r manipulate_vec}
+as.numeric(pull(prob1_df, vec_log)) * pull(prob1_df, vec_num)
+as.factor(pull(prob1_df, vec_log)) * pull(prob1_df, vec_num)
+as.numeric(as.factor(pull(prob1_df, vec_log))) * pull(prob1_df, vec_num)
+```
