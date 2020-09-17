@@ -72,9 +72,27 @@ data("penguins", package = "palmerpenguins")
 
 The penguins dataset contains `r ncol(penguins)` variables and `r nrow(penguins)` rows.
 
+The **species** variable is a `r class(pull(penguins, species))` vector. The levels of **speices** are `r levels(pull(penguins, species))`. 
+
+The **island** variable is a `r class(pull(penguins, island))` vector. The levels of **island** are `r levels(pull(penguins, island))`. 
+
+The **bill_length_mm** variable is a `r class(pull(penguins, bill_length_mm))` vector. The range of **bill_length_mm** is `r range(pull(penguins, bill_length_mm), na.rm = TRUE)`. 
+
+The **bill_depth_mm** variable is a `r class(pull(penguins, bill_depth_mm))` vector. The range of **bill_depth_mm** is `r range(pull(penguins, bill_depth_mm), na.rm = TRUE)`. 
+
+The **flipper_length_mm** variable is a `r class(pull(penguins, flipper_length_mm))` vector. The range of **flipper_length_mm** is `r range(pull(penguins, flipper_length_mm), na.rm = TRUE)`. 
+
+The **body_mass_g** variable is a `r class(pull(penguins, body_mass_g))` vector. The range of **body_mass_g** is `r range(pull(penguins, body_mass_g), na.rm = TRUE)`. 
+
+The **sex** variable is a `r class(pull(penguins, sex))` vector. The levels of **sex** are `r levels(pull(penguins, sex))`. 
+
+The **year** variable is a `r class(pull(penguins, year))` vector. The study is conducted from `r min(pull(penguins, year))` to `r max(pull(penguins, year))`. 
+
 The variables in penguins are `r ls(penguins)`.
 
 The mean of flipper length is `r round(mean(pull(penguins, flipper_length_mm), na.rm = TRUE),2)`.
+
+Make a scatterplot relating the flipper length and the bill length. 
 
 ```{r make_scatterplot}
 ggplot(data = penguins, 
