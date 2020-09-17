@@ -78,8 +78,6 @@ The mean of flipper length is `r round(mean(pull(penguins, flipper_length_mm), n
 
 ```{r make_scatterplot}
 ggplot(data = penguins, 
-       xName = 'Bill length in mm',
-       yName = 'Flipper length in mm',
        aes(x = bill_length_mm, y = flipper_length_mm, color = species)) + geom_point()
-ggsave("scatter_plot.pdf", height = 4, width = 6)
+ggsave("scatter_plot.pdf", height = 6, width = 6)
 ```
