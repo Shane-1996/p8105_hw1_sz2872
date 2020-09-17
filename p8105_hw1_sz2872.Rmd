@@ -26,7 +26,6 @@ prob1_df =
     vec_factor = factor(c("small", "small", "small", "mid", "mid", "mid", "mid", "large", "large", "large"))
   )
 
-prob1_df
 ```
 
 Take the mean of each variable in my data frame.
