@@ -74,4 +74,4 @@ The penguins dataset contains `r ncol(penguins)` variables and `r nrow(penguins)
 
 The variables in penguins are `r ls(penguins)`.
 
-The mean of flipper length is `r mean(pull(penguins, flipper_length_mm))`.
+The mean of flipper length is `r round(mean(pull(penguins, flipper_length_mm), na.rm = TRUE),2)`.
