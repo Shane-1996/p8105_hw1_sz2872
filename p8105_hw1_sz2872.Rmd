@@ -77,6 +77,9 @@ The variables in penguins are `r ls(penguins)`.
 The mean of flipper length is `r round(mean(pull(penguins, flipper_length_mm), na.rm = TRUE),2)`.
 
 ```{r make_scatterplot}
-ggplot(penguins, aes(x = bill_length_mm, y = flipper_length_mm, color = species)) + geom_point()
+ggplot(data = penguins, 
+       xName = 'Bill length in mm',
+       yName = 'Flipper length in mm',
+       aes(x = bill_length_mm, y = flipper_length_mm, color = species)) + geom_point()
 ggsave("scatter_plot.pdf", height = 4, width = 6)
 ```
