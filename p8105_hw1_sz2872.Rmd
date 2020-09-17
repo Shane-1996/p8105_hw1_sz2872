@@ -69,3 +69,9 @@ Load the penguins dataset.
 ```{r load_package}
 data("penguins", package = "palmerpenguins")
 ```
+
+The penguins dataset contains `r ncol(penguins)` variables and `r nrow(penguins)` rows.
+
+The variables in penguins are `r ls(penguins)`.
+
+The mean of flipper length is `r mean(pull(penguins, flipper_length_mm))`.
